@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <section class="container mx-auto grid grid-cols-3 gap-4">
+        {% for meal in meals %}
+            <div>
+                <img src="{{meal.strMealThumb}}" alt="">
+                <h1 class="text-2xl font-bold"> {{meal.strMeal}} </h1>
+                <p> {{meal.idMeal}} </p>
+            </div>
+        {% endfor %}
+    </section>
+{% endblock content %}
